@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboardAnchor" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.DashboardFormController">
+   <children>
+      <Pane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #414a4c;">
+         <children>
+            <Label fx:id="lblMenu" alignment="CENTER" layoutX="127.0" layoutY="364.0" prefHeight="40.0" prefWidth="450.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDescription" alignment="CENTER" layoutX="127.0" layoutY="422.0" prefHeight="40.0" prefWidth="450.0" text="Please select one of above main operations to proceed" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgStudent" fitHeight="80.0" fitWidth="80.0" layoutX="44.0" layoutY="180.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dashboardImage/graduated.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgReserve" fitHeight="70.0" fitWidth="70.0" layoutX="398.0" layoutY="190.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dashboardImage/booking.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgRoom" fitHeight="80.0" fitWidth="80.0" layoutX="214.0" layoutY="185.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dashboardImage/bed.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgSetting" fitHeight="30.0" fitWidth="30.0" layoutX="656.0" layoutY="14.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dashboardImage/settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgReservedCheck" fitHeight="100.0" fitWidth="100.0" layoutX="556.0" layoutY="170.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/online-booking.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

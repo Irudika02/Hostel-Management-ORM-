@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginAnchor" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.LoginFormController">
+   <children>
+      <Pane prefHeight="506.0" prefWidth="370.0" style="-fx-background-color: #002147;">
+         <children>
+            <Label layoutX="80.0" layoutY="209.0" prefHeight="53.0" prefWidth="210.0" text="Welcome To " textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="262.0" text="Hostel Management System" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="loginPane" layoutX="370.0" prefHeight="506.0" prefWidth="335.0" style="-fx-background-color: #008080;">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="50.0" layoutY="253.0" onKeyReleased="#key_Entered" prefHeight="35.0" prefWidth="231.0" promptText="Username" />
+            <PasswordField fx:id="txtPassword" layoutX="50.0" layoutY="311.0" onKeyReleased="#key_Entered" prefHeight="35.0" prefWidth="231.0" promptText="Password" />
+            <JFXButton layoutX="50.0" layoutY="388.0" onAction="#LoginOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff7f50;" text="Login">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="89.0" fitWidth="89.0" layoutX="121.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/login.png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="checkBox" layoutX="288.0" layoutY="320.0" mnemonicParsing="false" onAction="#changeVisibility" prefHeight="17.0" prefWidth="5.0" />
+            <TextField fx:id="passwordText" layoutX="50.0" layoutY="311.0" prefHeight="35.0" prefWidth="231.0" visible="false" />
+            <JFXButton layoutX="168.0" layoutY="388.0" onAction="#RegisterOnAction" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #ff7f50;" text="Register">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Pane fx:id="registerPane" layoutX="-5.0" prefHeight="506.0" prefWidth="341.0" style="-fx-background-color: #808080;" visible="false">
+               <children>
+                  <ImageView fitHeight="89.0" fitWidth="89.0" layoutX="123.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/registration-form.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtRegister_Username" layoutX="52.0" layoutY="253.0" onKeyReleased="#key_Entered_register" prefHeight="35.0" prefWidth="231.0" promptText="Username" />
+                  <PasswordField fx:id="txtRegister_Password" layoutX="52.0" layoutY="311.0" onKeyReleased="#key_Entered_register" prefHeight="35.0" prefWidth="231.0" promptText="Password" />
+                  <JFXButton layoutX="168.0" layoutY="384.0" onAction="#RegisteredOnAction" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #ff7f50;" text="Registered">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="52.0" layoutY="384.0" onAction="#BackLoginOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ff7f50;" text="Login">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

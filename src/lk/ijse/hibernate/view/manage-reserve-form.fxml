@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reservationAnchor" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.controller.ManageReserveFormController">
+   <children>
+      <Label layoutX="530.0" layoutY="15.0" text="Date :" />
+      <Label fx:id="lblDate" layoutX="580.0" layoutY="15.0" text="2022-10-12" textFill="#830000" />
+      <Label layoutX="687.0" layoutY="15.0" text="Time :" />
+      <Label fx:id="lblTime" layoutX="732.0" layoutY="15.0" text="10:20:35" textFill="#5e0000" />
+      <ComboBox fx:id="cmbStudent" layoutX="28.0" layoutY="119.0" prefWidth="150.0" promptText="Student ID" />
+      <TextField fx:id="txtName" layoutX="29.0" layoutY="156.0" promptText="Student Name" />
+      <TextField fx:id="txtAddress" layoutX="29.0" layoutY="193.0" promptText="Student Address" />
+      <TextField fx:id="txtResId" layoutX="628.0" layoutY="156.0" promptText="RES00-001" />
+      <ComboBox fx:id="cmbRoom" layoutX="232.0" layoutY="119.0" prefWidth="150.0" promptText="Room Type ID" />
+      <TextField fx:id="txtType" layoutX="232.0" layoutY="156.0" prefHeight="26.0" prefWidth="150.0" promptText="Room Type" />
+      <TextField fx:id="txtRoomQty" layoutX="232.0" layoutY="193.0" prefHeight="26.0" prefWidth="149.0" promptText="Available Room Qty" />
+      <TextField fx:id="txtKeyMoney" layoutX="431.0" layoutY="156.0" prefHeight="26.0" prefWidth="149.0" promptText="Key Money" />
+      <TextField fx:id="txtQty" alignment="CENTER_RIGHT" layoutX="431.0" layoutY="193.0" prefHeight="26.0" prefWidth="62.0" promptText="QTY" />
+      <Separator layoutX="608.0" layoutY="119.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="1.0" />
+      <JFXButton fx:id="btnAdd" layoutX="677.0" layoutY="229.0" onAction="#AddOnAction" prefHeight="3.0" prefWidth="100.0" style="-fx-background-color: #00a800;" styleClass="textPane" stylesheets="@styls/student-form.css" text="Add">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <TableView fx:id="tblCart" layoutX="19.0" layoutY="280.0" prefHeight="193.0" prefWidth="759.0">
+        <columns>
+          <TableColumn prefWidth="148.0" text="RES ID" />
+            <TableColumn prefWidth="157.0" text="STATUS" />
+            <TableColumn prefWidth="156.0" text="STUDENT ID" />
+            <TableColumn prefWidth="120.0" text="ROOM ID" />
+            <TableColumn prefWidth="98.0" text="QTY" />
+            <TableColumn prefWidth="79.0" text="Delete" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="627.0" layoutY="495.0" onAction="#ReservedOnAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #00a800;" styleClass="textPane" stylesheets="@styls/student-form.css" text="Reseved">
+         <font>
+            <Font size="18.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="15.0" layoutY="15.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/home-button.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="79.0" layoutY="18.0" text="Manage Reservation">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbStatus" layoutX="431.0" layoutY="120.0" prefWidth="150.0" promptText="Status" />
+      <Label layoutX="627.0" layoutY="121.0" text="Reservation ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
